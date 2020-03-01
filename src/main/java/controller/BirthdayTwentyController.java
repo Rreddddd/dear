@@ -58,6 +58,9 @@ public class BirthdayTwentyController {
             }
             birthdayTwentyStartService.save(userName,password,false);
             result.put("errorCount",errorCount+1);
+            if(errorCount==6){
+                birthdayTwentyStartService.save("无奈","笨蛋",true);
+            }
         }
         return result;
     }

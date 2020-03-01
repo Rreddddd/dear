@@ -67,10 +67,24 @@ $(function(){
                             title : "哎哎哎",
                             content : "你没救了，提示：已经换了钥匙了现在是两个汉字的拼音"
                         });
-                    }else{
+                    }else if(msg.errorCount===5){
                         $.alert({
                             title : "拜拜",
-                            content : "不想再理你"
+                            content : "不想再理你了"
+                        });
+                    }else if(msg.errorCount===6){
+                        $.alert({
+                            title : "再见",
+                            content : "还在点"
+                        });
+                    }else if(msg.errorCount===7){
+                        $.alert({
+                            title : "无奈",
+                            content : "算了,我高估你了，不考验你了！",
+                            btn : "耻辱进入",
+                            onConfirm : function(){
+                                window.location.href="/dear/birthday/twenty/pageIn/";
+                            }
                         });
                     }
                 }

@@ -29,6 +29,9 @@
             self.jqElement.dialogContent.text(self.option.content);
             self.jqElement.dialogBtn.text(self.option.btn);
             self.jqElement.dialogBtn.on("click",function(){
+                if($.isFunction(self.option.onConfirm)){
+                    self.option.onConfirm.apply(self);
+                }
                 self.close();
             });
             self.jqElement.mask.on("click",function(){
@@ -73,7 +76,10 @@
         defaultOption : {
             title : "消息",
             content : "不想理你",
-            btn : "我已知错"
+            btn : "我已知错",
+            onConfirm : function(){
+
+            }
         }
     };
 
