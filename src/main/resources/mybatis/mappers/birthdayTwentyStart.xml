@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.BirthdayTwentyStartDao">
+
+    <insert id="save" parameterType="birthdayTwentyStartEntity">
+        insert into dear_birthday_twenty_start values(null,#{userName},#{password},#{valid},#{time});
+    </insert>
+
+    <select id="getSuccessCount" resultType="int">
+        select count(1) from dear_birthday_twenty_start dbts where dbts.VALID=1;
+    </select>
+
+    <select id="getErrorCount" resultType="int">
+        select count(1) from dear_birthday_twenty_start dbts where dbts.VALID=0;
+    </select>
+
+    <select id="removeAll">
+        delete from dear_birthday_twenty_start;
+    </select>
+</mapper>

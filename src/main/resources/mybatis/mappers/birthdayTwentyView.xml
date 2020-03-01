@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.BirthdayTwentyViewDao">
+
+    <insert id="save" parameterType="birthdayTwentyViewEntity">
+        insert into dear_birthday_twenty_view values(null,#{state},#{time});
+    </insert>
+
+    <select id="getLikeCount" resultType="int">
+        select count(1) from dear_birthday_twenty_view dbtv where dbtv.STATE=1;
+    </select>
+
+    <select id="getDontLikeCount" resultType="int">
+        select count(1) from dear_birthday_twenty_view dbtv where dbtv.STATE=0;
+    </select>
+
+    <select id="removeAll">
+        delete from dear_birthday_twenty_view;
+    </select>
+</mapper>
