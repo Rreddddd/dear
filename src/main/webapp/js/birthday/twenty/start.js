@@ -95,8 +95,8 @@ $(function(){
     if(wait.length>0){
         var waitTime=wait.find(">.time");
         var waitDesc=wait.find(">.desc");
-        var now,birthday=1583078400000,minus;
-        var hour,min,sec;
+        var now,birthday=1616256000000,minus;
+        var day,hour,min,sec;
         var interval=setInterval(function(){
             now=new Date().getTime();
             minus=birthday-now;
@@ -104,7 +104,8 @@ $(function(){
             if(sec>=60){
                 min=parseInt(sec/60);
                 hour=parseInt(min/60);
-                waitTime.text(addZero(hour)+":"+addZero(min%60)+":"+addZero(sec%60));
+                day=parseInt(hour/24);
+                waitTime.text("距离下次开启还有："+day+"天 "+addZero(hour%24)+":"+addZero(min%60)+":"+addZero(sec%60));
             }else{
                 waitTime.hide();
                 waitDesc.text("倒计时 "+sec+" 秒");
