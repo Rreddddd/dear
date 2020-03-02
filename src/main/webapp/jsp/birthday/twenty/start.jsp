@@ -11,11 +11,11 @@
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/birthday/twenty/start.js"></script>
 </head>
 <body>
-<%--    <div class="wait">--%>
-<%--        <span class="time">距离下次开启:</span>--%>
-<%--        <br/>--%>
-<%--        <span class="desc">生日都过完了还来看什么.!^ ^！zzzzzzzz</span>--%>
-<%--    </div>--%>
+    <div class="wait">
+        <span class="time">距离下次开启:</span>
+        <br/>
+        <span class="desc">生日都过完了还来看什么.!^ ^！zzzzzzzz</span>
+    </div>
     <div class="wrapper">
         <div class="container">
             <h1>生日快乐</h1>
