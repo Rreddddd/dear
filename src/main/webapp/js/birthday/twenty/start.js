@@ -1,4 +1,5 @@
 $(function(){
+    $.openElf();
     var userName=$("#userName");
     var password=$("#password");
     $("#login").on("click",function(){

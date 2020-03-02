@@ -14,3 +14,12 @@ CREATE TABLE `dear_birthday_twenty_view` (
                                              `TIME`  datetime NOT NULL ,
                                              PRIMARY KEY (`ID`)
 );
+drop table if exists `message_board`;
+CREATE TABLE `message_board` (
+                            `ID`  int(8) NOT NULL AUTO_INCREMENT ,
+                            `IP`  varchar(50) NOT NULL ,
+                            `LOCATION`  varchar(200) NOT NULL ,
+                            `CONTENT`  varchar(20000) NULL ,
+                            `TIME`  datetime NOT NULL ,
+                            PRIMARY KEY (`ID`)
+);

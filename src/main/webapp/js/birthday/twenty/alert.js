@@ -61,6 +61,11 @@
                 "opacity" : "1",
                 "margin-top" : -(self.jqElement.dialog.height()/2)+"px"
             });
+            if(self.option.closeMil>=0){
+                setTimeout(function(){
+                    self.close();
+                },self.option.closeMil);
+            }
         },
         close : function(){
             var self=this;
@@ -77,6 +82,7 @@
             title : "消息",
             content : "不想理你",
             btn : "我已知错",
+            closeMil : -1,
             onConfirm : function(){
 
             }

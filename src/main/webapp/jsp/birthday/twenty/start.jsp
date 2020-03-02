@@ -2,10 +2,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>祝我最爱的人20岁生日快乐</title>
+    <title>给我最爱的人21岁生日准备</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/elf.css?n=<%=Math.random()%>"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/birthday/twenty/start.css"/>
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/birthday/twenty/alert.js"></script>
+    <script type="application/javascript" src="${pageContext.request.contextPath}/js/elf.js?n=<%=Math.random()%>"></script>
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/birthday/twenty/start.js"></script>
 </head>
 <body>
