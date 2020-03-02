@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>给我最爱的人21岁生日准备</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/elf.css?n=<%=Math.random()%>"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/birthday/twenty/start.css"/>
@@ -11,11 +11,11 @@
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/birthday/twenty/start.js"></script>
 </head>
 <body>
-    <div class="wait">
-        <span class="time">距离下次开启:</span>
-        <br/>
-        <span class="desc">生日都过完了还来看什么.!^ ^！zzzzzzzz</span>
-    </div>
+<%--    <div class="wait">--%>
+<%--        <span class="time">距离下次开启:</span>--%>
+<%--        <br/>--%>
+<%--        <span class="desc">生日都过完了还来看什么.!^ ^！zzzzzzzz</span>--%>
+<%--    </div>--%>
     <div class="wrapper">
         <div class="container">
             <h1>生日快乐</h1>
