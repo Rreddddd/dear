@@ -49,10 +49,23 @@
 .lfr.homingRight{
     right: 30px;
 }
+/*
+    最爱的一张
+*/
+/*.lfr.expand{*/
+/*    background: url("/image/elfHead.JPG");*/
+/*    background-size: 167%;*/
+/*    background-position: -18px -50px;*/
+/*    animation:lfr-rotate 10s infinite;*/
+/*    -webkit-animation:lfr-rotate 10s infinite;*/
+/*}*/
+/*
+    被迫更改
+*/
 .lfr.expand{
-    background: url("/image/elfHead.JPG");
-    background-size: 167%;
-    background-position: -18px -50px;
+    background: url("/image/elfHead_1.JPG");
+    background-size: 140%;
+    background-position: -12px -11px;
     animation:lfr-rotate 10s infinite;
     -webkit-animation:lfr-rotate 10s infinite;
 }
