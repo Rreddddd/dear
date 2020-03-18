@@ -6,10 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import pojo.AccessRecordKind;
+import service.AccessRecordService;
 import service.BirthdayTwentyStartService;
 import service.BirthdayTwentyViewService;
+import service.impl.AccessRecordImplService;
 import service.impl.BirthdayTwentyStartImplService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,18 +23,22 @@ public class BirthdayTwentyController {
 
     private BirthdayTwentyStartService birthdayTwentyStartService;
     private BirthdayTwentyViewService birthdayTwentyViewService;
+    private AccessRecordService accessRecordService;
 
     @Autowired
-    public BirthdayTwentyController(BirthdayTwentyStartImplService birthdayTwentyStartImplService,BirthdayTwentyViewService birthdayTwentyViewService){
+    public BirthdayTwentyController(BirthdayTwentyStartImplService birthdayTwentyStartImplService,BirthdayTwentyViewService birthdayTwentyViewService,
+                                    AccessRecordImplService accessRecordService){
         this.birthdayTwentyStartService=birthdayTwentyStartImplService;
         this.birthdayTwentyViewService=birthdayTwentyViewService;
+        this.accessRecordService=accessRecordService;
     }
 
     @RequestMapping("/")
-    public ModelAndView start(){
+    public ModelAndView start(HttpServletRequest request){
         if(birthdayTwentyStartService.getSuccessState()){
             return new ModelAndView("redirect:/dear/birthday/twenty/pageIn/");
         }else{
+            accessRecordService._addAccessRecord(request, AccessRecordKind.birthday_twenty_start.getCode());
             return new ModelAndView("jsp/birthday/twenty/start");
         }
     }
@@ -66,10 +74,12 @@ public class BirthdayTwentyController {
     }
 
     @RequestMapping("/pageIn")
-    public ModelAndView pageIn(){
+    public ModelAndView pageIn(HttpServletRequest request){
         if(birthdayTwentyViewService.getLikeState()){
+            accessRecordService._addAccessRecord(request, AccessRecordKind.birthday_twenty_view.getCode());
             return new ModelAndView("jsp/birthday/twenty/memories");
         }else{
+            accessRecordService._addAccessRecord(request, AccessRecordKind.birthday_twenty_memories.getCode());
             return new ModelAndView("jsp/birthday/twenty/view");
         }
     }

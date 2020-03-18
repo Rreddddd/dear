@@ -23,3 +23,12 @@ CREATE TABLE `message_board` (
                             `TIME`  datetime NOT NULL ,
                             PRIMARY KEY (`ID`)
 );
+drop table if exists `access_record`;
+CREATE TABLE `access_record` (
+                            `ID`  int(8) NOT NULL AUTO_INCREMENT ,
+                            `METHOD`  varchar(50) NOT NULL ,
+                            `IP`  varchar(50) NOT NULL ,
+                            `LOCATION`  varchar(200) NOT NULL ,
+                            `TIME`  datetime NOT NULL ,
+                            PRIMARY KEY (`ID`)
+);
