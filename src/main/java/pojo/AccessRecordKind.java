@@ -14,6 +14,15 @@ public enum AccessRecordKind {
         this.code=code;
     }
 
+    public static String getNameByCode(String code){
+        for(AccessRecordKind value : values()){
+            if(value.getCode().equals(code)){
+                return value.getName();
+            }
+        }
+        return "未命名模块";
+    }
+
     public String getCode() {
         return code;
     }

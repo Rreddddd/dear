@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 public interface AccessRecordDao {
 
     void save(AccessRecordEntity entity);
+
+    int getCountByIp(String ip);
 }

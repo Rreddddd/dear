@@ -5,4 +5,8 @@
     <insert id="save" parameterType="accessRecordEntity">
         insert into access_record values(null,#{method},#{ip},#{location},#{time});
     </insert>
+
+    <select id="getCountByIp" resultType="Integer">
+        select count(1) from access_record ar where ar.ip=#{ip};
+    </select>
 </mapper>
