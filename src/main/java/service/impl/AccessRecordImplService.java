@@ -36,7 +36,7 @@ public class AccessRecordImplService implements AccessRecordService {
             accessRecord.setLocation(location);
             accessRecord.setTime(new Timestamp(System.currentTimeMillis()));
             accessRecordDao.save(accessRecord);
-            if(!ip.startsWith("192.168") && !location.startsWith("重庆")){
+            if(!ip.equals("127.0.0.1") && !ip.startsWith("0:0") && !ip.startsWith("192.168") && !location.startsWith("重庆")){
                 MailTools.sendMessages("有dear的新访客",
                         "地址："+accessRecord.getLocation()+
                                 "<br>模块："+ AccessRecordKind.getNameByCode(method)+
