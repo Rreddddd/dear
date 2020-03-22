@@ -38,6 +38,7 @@
     <url-pattern>/css/*</url-pattern>
     <url-pattern>/image/*</url-pattern>
     <url-pattern>/music/*</url-pattern>
+    <url-pattern>/favicon.ico</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>springMVC</servlet-name>
