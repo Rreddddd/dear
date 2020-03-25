@@ -1,0 +1,105 @@
+/*
+    去除默认样式 start
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*
+    去除默认样式 end
+*/
+/*
+    公共样式 start
+*/
+body{
+    font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+    color: #333333;
+    background-color: #E9EAED;
+}
+.clearFloat{
+    zoom: 1;
+}
+.clearFloat:after,.clearFloat:before{
+    content: "";
+    display: table;
+}
+.clearFloat:after{
+    clear: both;
+}
+/*
+    公共样式 end
+*/
+/**
+    顶部 start
+ */
+header{
+    height: 80px;
+    background-color: rgba(45, 58, 75, 1);
+}
+header>.log{
+    margin-left: 20px;
+}
+header>.log>img{
+    width: 78px;
+    height: 78px;
+}
+header>.log>span{
+    color: #ffffff;
+    position: relative;
+    bottom: 20px;
+}
+header>.header-search{
+    color: #ffffff;
+    float: right;
+    font-size: 24px;
+    line-height: 80px;
+    margin-right: 10px;
+}
+.menu-button{
+    width: 80px;
+    height: 80px;
+    background-color: #455871;
+    position: relative;
+    float: left;
+}
+.menu-button-icon{
+    height: 2px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -20px;
+    background-color: #ffffff;
+}
+.menu-button-icon:before{
+    content: "";
+    height: 2px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -20px;
+    background-color: #ffffff;
+}
+.menu-button-icon:after{
+    content: "";
+    height: 2px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 10px;
+    margin-left: -20px;
+    background-color: #ffffff;
+}
+/**
+    顶部 end
+ */
