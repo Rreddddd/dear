@@ -13,7 +13,7 @@ import java.util.Properties;
 public interface MailTools {
 
     String SEND_MAIL_USER="2738397224@qq.com";
-    String SEND_MAIL_PASSWORD="hnrepsskhdgqdgjh";
+    String SEND_MAIL_PASSWORD="fuswgxbpvefwdfef";
     String RECEIVE_MAIL_USER="rred@vip.qq.com";
 
     static void sendMessages(@NotNull String title,@NotNull String content){
