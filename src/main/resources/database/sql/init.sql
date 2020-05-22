@@ -32,3 +32,11 @@ CREATE TABLE `access_record` (
                             `TIME`  datetime NOT NULL ,
                             PRIMARY KEY (`ID`)
 );
+drop table if exists `im_record`;
+CREATE TABLE `im_record` (
+                            `ID`  int(8) NOT NULL AUTO_INCREMENT ,
+                            `MSG_TYPE`  int(2) NOT NULL ,
+                            `MSG_TEXT`  varchar(20000) NOT NULL ,
+                            `TIME`  datetime NOT NULL ,
+                            PRIMARY KEY (`ID`)
+);

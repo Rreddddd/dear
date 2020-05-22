@@ -5,9 +5,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <title>太阳当空照_床前明月光</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/font/iconfont.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reader-mobile.css?n=<%=Math.random()%>"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/base_mobile.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index_mobile.css"/>
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+    <script type="application/javascript" src="${pageContext.request.contextPath}/js/reader-mobile.js?n=<%=Math.random()%>"></script>
     <script type="application/javascript" src="${pageContext.request.contextPath}/js/base_mobile.js"></script>
 </head>
 <body>

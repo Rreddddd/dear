@@ -74,4 +74,7 @@
         <aop:pointcut id="pointcut" expression="execution(* service.impl.*.*(..))"/>
         <aop:advisor advice-ref="advice" pointcut-ref="pointcut"/>
     </aop:config>
+
+    <!-- 特殊类 -->
+    <bean class="util.SpringBeanTools"/>
 </beans>

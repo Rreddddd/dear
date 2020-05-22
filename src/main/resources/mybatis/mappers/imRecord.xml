@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IMRecordDao">
+
+    <resultMap id="list" type="iMRecordEntity">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="msgType" property="msgType" jdbcType="INTEGER"/>
+        <result column="msgText" property="msgText" jdbcType="VARCHAR"/>
+        <result column="time" property="time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="save" parameterType="iMRecordEntity">
+        insert into im_record values(null,#{msgType},#{msgText},#{time});
+    </insert>
+
+    <select id="getLastTime" resultType="java.sql.Timestamp">
+        select max(ir.TIME) from im_record ir;
+    </select>
+
+    <select id="getRecord" resultMap="list">
+        select ir.id,ir.msg_type msgType,ir.msg_text msgText,ir.time from im_record ir;
+    </select>
+</mapper>
