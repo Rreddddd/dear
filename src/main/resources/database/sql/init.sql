@@ -34,7 +34,7 @@ CREATE TABLE `access_record` (
 );
 drop table if exists `member`;
 CREATE TABLE `member` (
-                            `ID`  int(8) NOT NULL ,
+                            `ID`  int(8) NOT NULL AUTO_INCREMENT,
                             `GUID`  char(36) NOT NULL ,
                             `NAME`  varchar(100) NOT NULL ,
                             `HEAD_IMG_URL`  varchar(2000) NOT NULL DEFAULT '' ,
@@ -44,7 +44,7 @@ CREATE TABLE `member` (
 );
 drop table if exists `member_login_info`;
 CREATE TABLE `member_login_info` (
-                            `ID`  int(8) NOT NULL ,
+                            `ID`  int(8) NOT NULL AUTO_INCREMENT,
                             `MEMBER_ID`  int(8) NOT NULL ,
                             `IP`  varchar(50) NOT NULL ,
                             `LOCATION`  varchar(200) NOT NULL ,
@@ -56,7 +56,7 @@ CREATE TABLE `member_login_info` (
 );
 drop table if exists `member_im_record`;
 CREATE TABLE `member_im_record` (
-                            `ID`  int(8) NOT NULL ,
+                            `ID`  int(8) NOT NULL AUTO_INCREMENT,
                             `MERGE_MEMBER_ID`  char(36) NOT NULL ,
                             `FROM_MEMBER_ID`  int(8) NOT NULL ,
                             `TO_MEMBER_ID`  int(8) NOT NULL ,
